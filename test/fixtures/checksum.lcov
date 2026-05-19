@@ -1,0 +1,6 @@
+TN:
+SF:src/parser/checksum.ts
+DA:1,7,checksum-a
+DA:2,not-a-number,checksum-b
+DA:3,0,checksum-c
+end_of_record

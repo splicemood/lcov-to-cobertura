@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage
+  SYSTEM 'http://cobertura.sourceforge.net/xml/coverage-04.dtd'>
+<coverage branch-rate="0.75" branches-covered="3" branches-valid="4" complexity="0" line-rate="0.6666666666666666" lines-covered="4" lines-valid="6" timestamp="123456" version="2.0.3">
+	<sources>
+		<source>.</source>
+	</sources>
+	<packages>
+		<package line-rate="0.6666666666666666" branch-rate="0.75" name="src.service" complexity="0">
+			<classes>
+				<class branch-rate="0.75" complexity="0" filename="src/service/account.ts" line-rate="0.6666666666666666" name="src.service.account.ts">
+					<methods>
+						<method name="createAccount" signature="" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line hits="3" number="10" branch="false"/>
+							</lines>
+						</method>
+						<method name="renderTitle&lt;T, U&gt;" signature="" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line hits="0" number="20" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="3" number="10"/>
+						<line branch="false" hits="1" number="11"/>
+						<line branch="true" hits="0" number="12" condition-coverage="75% (3/4)"/>
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="0" filename="src/service/account.spec.ts" line-rate="0.6666666666666666" name="src.service.account.spec.ts">
+					<methods>
+					</methods>
+					<lines>
+						<line branch="false" hits="1" number="1"/>
+						<line branch="false" hits="1" number="2"/>
+						<line branch="false" hits="0" number="3"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

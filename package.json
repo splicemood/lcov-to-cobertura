@@ -1,0 +1,45 @@
+{
+  "name": "@splicemood/lcov-to-cobertura",
+  "version": "0.1.0",
+  "description": "Convert LCOV coverage reports to Cobertura XML from Node.js",
+  "type": "module",
+  "license": "MIT",
+  "author": "Splice Mood",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/splicemood/lcov-to-cobertura.git"
+  },
+  "bugs": {
+    "url": "https://github.com/splicemood/lcov-to-cobertura/issues"
+  },
+  "homepage": "https://github.com/splicemood/lcov-to-cobertura#readme",
+  "bin": {
+    "lcov-to-cobertura": "./dist/src/cli.js",
+    "lcov_cobertura": "./dist/src/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "prepack": "npm run clean && npm run build",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@xmldom/xmldom": "^0.9.10",
+    "typescript": "^5.5.4"
+  }
+}
