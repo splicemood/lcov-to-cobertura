@@ -136,7 +136,7 @@ describe("LcovCobertura", () => {
       windowsHide: true,
     });
     assert.equal(version.status, 0, version.stderr);
-    assert.equal(version.stdout.trim(), "[lcov_cobertura 0.1.0]");
+    assert.equal(version.stdout.trim(), "[lcov_cobertura 0.1.1]");
   });
 });
 

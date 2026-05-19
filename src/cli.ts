@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 import { LcovCobertura } from "./index.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 
 interface CliOptions {
   baseDir: string;
@@ -122,6 +122,17 @@ export function main(argv = process.argv.slice(2)): number {
   }
 }
 
-if (process.argv[1] !== undefined && path.resolve(fileURLToPath(import.meta.url)) === path.resolve(process.argv[1])) {
+if (isDirectCliRun()) {
   process.exitCode = main();
+}
+
+function isDirectCliRun(): boolean {
+  if (process.argv[1] === undefined) {
+    return false;
+  }
+
+  const modulePath = fs.realpathSync.native(fileURLToPath(import.meta.url));
+  const entryPath = fs.realpathSync.native(process.argv[1]);
+
+  return path.resolve(modulePath) === path.resolve(entryPath);
 }

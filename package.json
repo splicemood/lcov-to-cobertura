@@ -1,6 +1,6 @@
 {
   "name": "@splicemood/lcov-to-cobertura",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert LCOV coverage reports to Cobertura XML from Node.js",
   "type": "module",
   "license": "MIT",
@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/splicemood/lcov-to-cobertura#readme",
   "bin": {
-    "lcov-to-cobertura": "./dist/src/cli.js",
-    "lcov_cobertura": "./dist/src/cli.js"
+    "lcov-to-cobertura": "dist/src/cli.js",
+    "lcov_cobertura": "dist/src/cli.js"
   },
   "exports": {
     ".": {
